@@ -1,0 +1,200 @@
+@charset "UTF-8";
+
+/*
+Theme Name: MaxStudio
+Theme URI: https://wordpress.org/themes/twentytwentyone/
+Author: the WordPress team
+Author URI: https://wordpress.org/
+Description: Custom theme for Max Studio
+
+*/
+*{
+	font-family: 'Roboto Condensed', sans-serif;
+}
+&::-webkit-scrollbar {
+  display: none;
+}
+body{
+    color:#fff;
+    background-color: #000;
+}
+a,a:active,a:link{
+	color: #181818;
+}
+a:hover{
+	color: #727272;
+}
+.header-area{
+	position: relative;
+	height: 100vh;
+	overflow: hidden;
+	z-index:5;
+}
+.header{
+	background-color: #727272;
+	height: 100vh;
+	overflow: hidden;
+}
+.custom-logo{
+	max-width: 160px;
+}
+.navbar-toggler{
+	display: block;
+	position: relative;
+	top:-24px;
+}
+#mainMenu{
+	background: rgba(0, 0, 0, 0.8) !important;
+	border-bottom:2px solid #727272;
+}
+#mainMenu .nav-link{
+	color: #fff;
+	position: relative;
+}
+#mainMenu .nav-link:hover, #mainMenu .nav-link:active, #mainMenu .nav-link:focus{
+	color: #999;
+}
+#mainMenu a.nav-link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  border-radius: 4px;
+  background-color: #ccc;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+#mainMenu a.nav-link:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+.video-container{
+	width: 99vw;
+	height: 100vh;
+	position: absolute;
+	left:0;
+	z-index:0;
+}
+.video-container > video {
+	position: absolute;
+    width: 99.999%;
+    height: 100%;
+	object-fit: cover;
+}
+.play-video, .pause-video{
+	color: #fff;
+	font-size: 20px;
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+	z-index: 6;
+}
+.play-video-icon {
+	 fill: #fff; 
+	 width: 100px;
+}
+.header:hover .pause-video{ display:block !important; }
+
+.social-icons-area{
+	position: absolute;
+	top: 48vh;
+	left: 0;
+	z-index:7;
+}
+.wp-social-link {
+	color: #fff !important;
+}
+
+/*Slider Icon*/
+.rss-inner-page-slider-1 .slicknext{
+	right:-70px !important;
+}
+.rss-inner-page-slider-1 .slickprev{
+	left:-70px !important;
+}
+
+/*btnScrollToTop*/
+.btnScrollToTop{
+	background-color:rgba(0, 0, 0, 0.8);
+	color:#fff;
+	cursor: pointer;
+	display: none;
+	position: fixed;
+	bottom:0;
+	right:1%;
+	width: 80px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid rgb(255, 255, 255);
+    margin: 10px auto;
+}
+.wp-block-cb-carousel .slick-next::before, .wp-block-cb-carousel .slick-prev::before {
+  color: #fff;
+}
+.slick-next::before, .slick-prev::before {
+  font-size: 25px;
+  color: #fff !important;
+}
+.portfolio-slider div.slick-slide {
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+  overflow: hidden;
+  border: 5px solid transparent;
+}
+.portfolio-slider .slick-slide.slick-current.slick-active+div.slick-slide{
+    background: #111;
+    border: 4px solid #eee;
+}
+
+.clients-slider div.slick-slide img{
+    filter: grayscale(100%);
+    max-width:120px;
+}
+
+
+@media screen and (min-width: 0px) AND (max-width: 480px) {
+	#section100 h6, #section100 h2, #section100 ul{
+		text-align: center !important;
+		float: none !important;
+		margin: auto !important;
+		justify-content: center !important;
+	}
+	#section17{
+		text-align: center !important;
+	}
+	form .row.w-75.me-auto{
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+}
+
+/*Animations*/
+
+.bounce {
+    animation: bounce 1s ease-in-out;
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-50px);
+    }
+}
